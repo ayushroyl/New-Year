@@ -337,15 +337,10 @@ h5 {
         
          quoteElement.textContent = `${name}!`;
           var playSong = function() {
-            var audio = new Audio("https://jumpshare.com/share/FQtTjxEs6gtYFipk1FFy");
-            
-            // Play the audio
-    
-            audio.play();
-            
-            // Remove the event listener after it has been executed once
-            document.removeEventListener('click', playSong);
-        };
+    var audio = new Audio("./music.mp3"); // same folder as index.html
+    audio.play();
+    document.removeEventListener('click', playSong);
+};
 
         // Attach the clickHandler function to the click event on the document
         document.addEventListener('click', playSong);
